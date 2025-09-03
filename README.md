@@ -22,6 +22,8 @@ The system uses a **Queue and Worker** pattern to handle checkouts asynchronousl
 4.  **Workers (Consumers):** These are independent background services (e.g., Docker containers or Lambda functions) that poll the message queue. When a job is received, a worker updates the reservation status to `PROCESSING`, calls the payment gateway, and finally updates the status to `COMPLETED` or `FAILED`.
 
 
+## Project Structure
+
 .
 ├── config/...                                   # configuration files and scripts, includes Docker
 ├── Makefile                                     # shortcuts for setup and common tasks

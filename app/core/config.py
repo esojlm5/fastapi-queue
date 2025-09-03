@@ -1,3 +1,4 @@
+from uuid import UUID
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -6,6 +7,7 @@ class Settings(BaseSettings):
 
     SUPABASE_URL: str
     SUPABASE_KEY: str
+    API_TOKEN: UUID
 
     # This configuration tells Pydantic to load variables from a .env file
     # if it exists, which is perfect for local development.
