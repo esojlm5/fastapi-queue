@@ -23,33 +23,6 @@ The system uses a **Queue and Worker** pattern to handle checkouts asynchronousl
 
 
 .
-├── app/
-│   ├── __init__.py
-│   ├── api/
-│   │   ├── __init__.py
-│   │   └── routers/
-│   │       ├── __init__.py
-│   │       └── checkout.py       # FastAPI router for the checkout endpoint
-│   ├── core/
-│   │   ├── __init__.py
-│   │   └── config.py         # Pydantic settings for env variables
-│   ├── domain/
-│   │   ├── __init__.py
-│   │   └── models.py         # Core Pydantic models (e.g., Reservation)
-│   ├── repositories/
-│   │   ├── __init__.py
-│   │   ├── abstract.py       # Abstract Base Class for the repository
-│   │   └── supabase_repo.py  # Concrete Supabase implementation
-│   ├── services/
-│   │   ├── __init__.py
-│   │   └── checkout_service.py # The business logic for checkout
-│   └── main.py                 # Main FastAPI app instantiation
-├── .env                      # To store secrets like Supabase keys
-├── requirements.txt
-└── ...
-
-
-.
 ├── config/...                                   # configuration files and scripts, includes Docker
 ├── Makefile                                     # shortcuts for setup and common tasks
 ├── scripts/...                                  # helper scripts
